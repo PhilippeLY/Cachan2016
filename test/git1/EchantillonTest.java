@@ -8,15 +8,14 @@ package git1;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
-import org.junit.BeforeClass;
 
 /**
  *
  * @author bphou
  */
 public class EchantillonTest {
-    Echantillon instOne;
-    Echantillon instMany;
+    public Echantillon instOne;
+    public Echantillon instMany;
     
     public EchantillonTest() {
     }
