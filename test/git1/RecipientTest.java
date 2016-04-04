@@ -62,21 +62,21 @@ public class RecipientTest {
     }
     
     @Test
-    public int getQuantite(){
+    public void getQuantite(){
         int resR = reservoir.getQuantite();
         
         assertEquals(50, resR);
     }
     
     @Test
-    public int getCapacite(){
+    public void getCapacite(){
         int capR = reservoir.getCapacite();
         
         assertEquals(100, capR);
     }
     
     @Test
-    public int getEspaceLibre(){
+    public void getEspaceLibre(){
         reservoir.setQuantite(42);
         int freeR = reservoir.getEspaceLibre();
         
@@ -84,7 +84,7 @@ public class RecipientTest {
     }
     
     @Test
-    public boolean estVide(){
+    public void estVide(){
         boolean b = reservoir.estVide();
         
         assertFalse(b);
@@ -97,7 +97,7 @@ public class RecipientTest {
     }
     
     @Test
-    public boolean estPlein(){
+    public void estPlein(){
         boolean b = reservoir.estPlein();
         
         assertFalse(b);
