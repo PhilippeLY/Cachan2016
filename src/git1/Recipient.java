@@ -33,6 +33,9 @@ public class Recipient {
     public int getCapacite(){
         return capacite;
     }
+    public int getEspaceLibre(){
+        return capacite - quantite;
+    }
     public boolean getRemplis(){
         return remplis;
     }
