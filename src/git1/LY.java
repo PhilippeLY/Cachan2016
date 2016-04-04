@@ -10,6 +10,8 @@ package git1;
  * @author fcd
  */
 public class LY {
+    public void joshua(){
+    }      
     public void Phoumano(){
         
     }
