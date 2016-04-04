@@ -11,6 +11,7 @@ package git1;
  */
 public class LY {
     public void joshua(){
-        
+    }
+    public void Philippe(){        
     }
 }
