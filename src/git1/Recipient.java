@@ -45,7 +45,9 @@ public class Recipient {
     public void setRemplis(boolean remplis){
         this.remplis = remplis;
     }
-    
+    public boolean estVide(){
+        return (quantite == 0);
+    }
     public void mettreUnDans(Recipient autre){
         if (autre != null && quantite > 0 && autre.getQuantite() < autre.getCapacite()){
             quantite -= 1;
