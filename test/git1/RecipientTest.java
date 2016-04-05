@@ -26,7 +26,7 @@ public class RecipientTest {
     }
     
     @Test
-    public void mettreUnDans(Recipient autre){
+    public void mettreUnDans(){
         verseur.mettreUnDans(reservoir);
         
         int resV = verseur.getQuantite();
@@ -37,7 +37,7 @@ public class RecipientTest {
     }
     
     @Test
-    public void remplir(Recipient autre){
+    public void remplir(){
         verseur.setQuantite(53);
         verseur.remplir(reservoir);
         
@@ -49,14 +49,14 @@ public class RecipientTest {
     }
     
     @Test
-    public void viderDans(Recipient autre){
+    public void viderDans(){
         verseur.viderDans(reservoir);
         
         int resV = verseur.getQuantite();
         int resR = reservoir.getQuantite();
         
-        assertEquals(3, resV);
-        assertEquals(100, resR);
+        assertEquals(0, resV);
+        assertEquals(60, resR);
     }
     
     @Test
@@ -95,14 +95,15 @@ public class RecipientTest {
     }
     
     @Test
-    public void estPlein(){
-        boolean b = reservoir.estPlein();
+    public void getRemplis(){
+        boolean b = reservoir.getRemplis();
         
         assertFalse(b);
         
-        reservoir.setQuantite(100);
+        reservoir.setQuantite(reservoir.getCapacite());
+        reservoir.setRemplis(true);
         
-        b = reservoir.estVide();
+        b = reservoir.getRemplis();
         
         assertTrue(b);
     }
